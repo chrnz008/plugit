@@ -21,3 +21,4 @@ plugit r - remove
 - [ ] options to remove specific plugins
 - [ ] opt plugins support
 - [ ] support downgrading (tagging)
+- [ ] better messages and interface instead of git messages

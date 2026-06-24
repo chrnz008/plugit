@@ -9,3 +9,5 @@ https://github.com/tpope/vim-surround
 
 https://github.com/chrisbra/colorizer
 https://github.com/mattn/vim-smear-cursor
+
+; vim: cms=;%s

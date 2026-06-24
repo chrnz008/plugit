@@ -6,6 +6,7 @@ if %errorlevel%==1 echo git doesnt exist
 
 setlocal
 
+REM TODO opt plugins
 set packdir=pack\foobar\start
 
 REM create packdir if doesnt exist
@@ -29,11 +30,17 @@ if not exist packs.txt (
 
 	REM update
 	if %1==u (
-		echo update
+		echo updating
+		for /F "eol=;" %%I in (packs.txt) do (
+			echo %%~nxI 
+			REM see for /?
+			git -C %packdir%\%%~nxI pull
+		)
 	)
 
 	REM remove all plugins
 	if %1==r (
+		REM TODO remove only specifics
 		REM removing the pack dir is better then looping over subfolders
 		rd /S /Q %packdir%
 		REM note that it just deletes start
@@ -43,5 +50,4 @@ if not exist packs.txt (
 )
 
 endlocal
-
-REM https://www.tutorialspoint.com/batch_script/batch_script_reading_from_files.htm
+REM TODO support downgrading (tagging)
