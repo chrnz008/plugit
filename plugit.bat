@@ -22,7 +22,9 @@ if not exist packs.txt (
 	REM install
 	if %1==i (
 		echo installing
-		for /F "eol=; tokens=1*" %i in (packs.txt) do echo %i
+		for /F "eol=;" %%i in (packs.txt) do (
+			git -C %packdir% clone --depth=1 %%i
+		)
 	)
 
 	REM update
@@ -32,7 +34,9 @@ if not exist packs.txt (
 
 	REM remove all plugins
 	if %1==r (
-		del /Q %packdir%\*
+		REM removing the pack dir is better then looping over subfolders
+		rd /S /Q %packdir%
+		REM note that it just deletes start
 		echo all plugins have been removed
 	)
 
