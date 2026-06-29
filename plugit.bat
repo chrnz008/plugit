@@ -20,9 +20,10 @@ if not exist packs.txt (
 	echo packs.txt doesnt exist
 ) else (
 	if "%~1"=="" (
-		echo plugit i - install
-		echo plugit u - update
-		echo plugit r - remove
+		echo plugit i               - install
+		echo plugit u               - update
+		echo plugit r               - remove all plugins
+		echo plugit r ^<plugin-name^> - remove ^<plugin-name^>
 	) else (
 
 		REM install
@@ -43,13 +44,23 @@ if not exist packs.txt (
 			)
 		)
 
-		REM remove all plugins
+		REM remove plugins
 		if "%~1"=="r" (
-			REM TODO remove only specifics
-			REM removing the pack dir is better then looping over subfolders
-			rd /S /Q %packdir%
-			REM note that it just deletes start
-			echo all plugins have been removed
+			REM remove all plugins if 2nd arg is empty
+			if "%~2"=="" (
+				REM removing the pack dir is better then looping over subfolders
+				rd /S /Q %packdir%
+				echo all plugins have been removed
+				REM note that it just deletes start
+			) else (
+				REM remove only specifics
+				if not exist %packdir%\%~2% (
+					echo %~2% doesnt exist
+				) else (
+					rd /S /Q %packdir%\%~2%
+					echo removed %~2%
+				)
+			)
 		)
 
 	)

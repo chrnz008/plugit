@@ -18,8 +18,9 @@ plugit r - remove
 - ; (semicolon) can be used to comment lines
 
 ## todo
-- [ ] options to remove specific plugins
+- [X] options to remove specific plugins
 - [ ] opt plugins support
 - [ ] support downgrading (tagging)
 - [ ] better messages and interface instead of git messages
 - [ ] Can simplify arg dispatch eg: Instead of nested ifs using labels
+- [ ] use either spaces or tabs in source code
