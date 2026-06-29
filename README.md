@@ -10,9 +10,10 @@ originally intended for vim but can be modified to work with any utility
 ## usage
 
 ```batch
-plugit i - install
-plugit u - update
-plugit r - remove
+plugit i               - install
+plugit u               - update
+plugit r               - remove
+plugit r <plugin-name> - remove <plugin-name>
 ```
 - the package list is read from packs.txt file
 - ; (semicolon) can be used to comment lines
@@ -23,4 +24,5 @@ plugit r - remove
 - [ ] support downgrading (tagging)
 - [ ] better messages and interface instead of git messages
 - [ ] Can simplify arg dispatch eg: Instead of nested ifs using labels
+- [ ] add wget or curlable plugins or scripts
 - [ ] use either spaces or tabs in source code
