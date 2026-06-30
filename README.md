@@ -20,7 +20,7 @@ plugit r <plugin-name> - remove <plugin-name>
 
 ## todo
 - [X] options to remove specific plugins
-- [ ] opt plugins support (but makes removing complex)
+- [ ] opt plugins support (but makes removing complex) (may be check for exist in both dir and delete??)
 - [ ] support downgrading (tagging)
 - [ ] better messages and interface instead of git messages
 - [ ] Can simplify arg dispatch eg: Instead of nested ifs using labels
