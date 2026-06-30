@@ -19,7 +19,8 @@ plugit r <plugin-name> - remove <plugin-name>
 - the package list is read from packs.txt file
 - ; (semicolon) can be used to comment lines
 - refer packs.txt for further more information
-
+- https://github.com/chrnz008/plugit/wiki/autodownload-script for getting latest script
+  
 ## todo
 - [X] options to remove specific plugins
 - [X] opt plugins support (but makes removing complex) (may be check for exist in both dir and delete??)
