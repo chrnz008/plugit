@@ -1,4 +1,9 @@
-;semicolon comments stuff
+; semicolon comments stuff
+
+; try avoiding copying the url from github itself wich results with a .git
+; for eg: https://github.com/mattn/vim-supertabpanel.git (issue while updating)
+; instead use browser url 
+
 https://github.com/Konfekt/filepicker.vim
 https://github.com/chrnz008/gruber.vim
 https://github.com/chrnz008/quack.vim
@@ -7,7 +12,10 @@ https://github.com/chrnz008/schizo.vim
 https://github.com/jiangmiao/auto-pairs
 https://github.com/tpope/vim-surround
 
-https://github.com/chrisbra/colorizer
-https://github.com/mattn/vim-smear-cursor
+; opt
+; url followed by any string are considered opt plugins
+https://github.com/chrisbra/colorizer          opt 
+https://github.com/mattn/vim-smear-cursor      opt  
+https://github.com/mattn/vim-supertabpanel     opt 
 
 ; vim: cms=;%s
