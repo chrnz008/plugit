@@ -2,6 +2,7 @@
 
 this is a simple plugin manager written in batch script for vim.
 originally intended for vim but can be modified to work with any utility
+(checkout draft branch or the v.0.1 tag)
 
 ## dependencies
 1. git
